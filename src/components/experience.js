@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const Experience = () => {
     return (
@@ -12,7 +13,7 @@ const Experience = () => {
                 <div class="work-area">
                     <h3 class="areaTitle ta-c">Work Experience</h3>
                     <div class="workDiv flexBCRow expAnimation">
-                        {/* {/* <img src="images/experience-LiCai_logo.jpeg" class="exp-img" alt=""> */}
+                        <StaticImage src="../images/experience-LiCai_logo.jpeg" class="exp-img" alt="" />
                             <div class="workContent">
                                 <h4 class="contentTitle">聯誠事務所 專利工程師</h4>
                                 <h5 class="contentSubtitle">文字撰寫 / 邏輯思考 / 資料搜尋</h5>
@@ -33,7 +34,7 @@ const Experience = () => {
                             </div>
                     </div>
                     <div class="workDiv flexBCRowr unAnimate">
-                        {/* {/* <img src="images/experience-IEC_logo.jpeg" class="exp-img" alt=""> */}
+                        <StaticImage src="../images/experience-IEC_logo.jpeg" class="exp-img" alt="" />
                             <div class="workContent">
                                 <h4 class="contentTitle">英業達 機構工程師</h4>
                                 <h5 class="contentSubtitle">產品設計 / 跨部門溝通 / 品質管控</h5>
@@ -58,7 +59,7 @@ const Experience = () => {
                 <div class="edu-area">
                     <h3 class="areaTitle ta-c">Education</h3>
                     <div class="eduDiv flexBCRow unAnimate">
-                        {/* {/* <img src="images/experience-ntu_logo.jpeg" class="exp-img" alt=""> */}
+                        <StaticImage src="../images/experience-ntu_logo.jpeg" class="exp-img" alt="" />
                             <div class="eduContent">
                                 <h4 class="contentTitle">國立台灣大學應用力學所</h4>
                                 <h5 class="contentSubtitle">機電效應 / 壓電材料</h5>
@@ -79,7 +80,7 @@ const Experience = () => {
                             </div>
                     </div>
                     <div class="eduDiv flexBCRowr unAnimate">
-                        {/* {/* <img src="images/experience-ntou_logo.jpeg" class="exp-img" alt=""> */}
+                        <StaticImage src="../images/experience-ntou_logo.jpeg" class="exp-img" alt="" />
                             <div class="eduContent">
                                 <h4 class="contentTitle">國立台灣海洋大學機械與機電工程學系</h4>
                                 <h5 class="contentSubtitle">機械設計 / 電機控制 / 力學</h5>

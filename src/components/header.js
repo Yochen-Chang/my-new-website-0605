@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const Header = () => {
     return (
@@ -7,7 +8,9 @@ const Header = () => {
             <div class="top">
 
                 <div id="logo">
-                <span class="image avatar48"><img src="images/icon-Yoshi Logo.png" alt="" /></span>
+                <span class="image avatar48">
+                    <StaticImage alt="Yoshi Logo" src="../images/icon-Yoshi Logo.png"/>
+                </span>
                 <h1 id="title">Hello I'm Yochen</h1>
                 <p>I'm a swing engineer</p>
                 </div>

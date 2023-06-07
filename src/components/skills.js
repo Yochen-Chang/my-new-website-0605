@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const Skills = () => {
     return (
@@ -11,7 +12,7 @@ const Skills = () => {
                 <div class="row">
                     <div class="col-4 col-12-mobile">
                         <article class="item">
-                            {/* <a href="#" class="image fit"><img src="images/skill-programing.png" alt="" /></a> */}
+                            <a href="#" class="image fit"><StaticImage src="../images/skill-programing.png" alt="skill-programin" /></a>
                         </article>
                         <header>
                             <h3>WebDesign</h3>
@@ -24,7 +25,7 @@ const Skills = () => {
                     </div>
                     <div class="col-4 col-12-mobile">
                         <article class="item">
-                            {/* <a href="#" class="image fit"><img src="images/skill-photograph.png" alt="" /></a> */}
+                            <a href="#" class="image fit"><StaticImage src="../images/skill-photograph.png" alt="skill-photograp" /></a>
                         </article>
                         <header>
                             <h3>Photograph</h3>
@@ -38,7 +39,7 @@ const Skills = () => {
                     </div>
                     <div class="col-4 col-12-mobile">
                         <article class="item">
-                            {/* <a href="#" class="image fit"><img src="images/skill-framework.png" alt="" /></a> */}
+                            <a href="#" class="image fit"><StaticImage src="../images/skill-framework.png" alt="skill-framework" /></a>
                         </article>
                         <header>
                             <h3>FrameWork</h3>

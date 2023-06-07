@@ -758,21 +758,8 @@
 				background-position: center center;
 			}
 
-			&.one {
-				background-color: #81918E;
-				// background-image: url('../../images/Banner-DailyUI.png');
-			}
-
-			&.two {
-				background-color: #f5fafa;
-			}
-
-			&.three {
-				background-color: #ecf1f1;
-			}
-
-			&.four {
-				background-color: #e8edec;
+			&#banner{
+				background-image: url('../../images/Banner-DailyUI.png');
 			}
 		}
 	}

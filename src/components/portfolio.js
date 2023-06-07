@@ -1,3 +1,4 @@
+import { StaticImage } from 'gatsby-plugin-image'
 import * as React from 'react'
 
 const Portfolio = () => {
@@ -12,7 +13,7 @@ const Portfolio = () => {
                 <div class="row">
                     <div class="col-4 col-12-mobile">
                         <article class="item">
-                            {/* <a href="#" class="image fit"><img src="images/portfolio-breadshop.png" alt="" /></a> */}
+                            <a href="#" class="image fit"><StaticImage src="../images/portfolio-breadshop.png" alt="" /></a>
                             <header>
                                 <a href="https://loving-archimedes-17098f.netlify.app/">
                                     <h3>Bread shop</h3>
@@ -25,7 +26,7 @@ const Portfolio = () => {
                             </header>
                         </article>
                         <article class="item">
-                            {/* <a href="#" class="image fit"><img src="images/portfolio-counter.png" alt="" /></a> */}
+                            <a href="#" class="image fit"><StaticImage src="../images/portfolio-counter.png" alt="" /></a>
                             <header>
                                 <a href="https://relaxed-davinci-079f7f.netlify.app/index.html">
                                     <h3>Counter</h3>
@@ -41,7 +42,7 @@ const Portfolio = () => {
                 </div>
                 <div class="col-4 col-12-mobile">
                         <article class="item">
-                            {/* <a href="#" class="image fit"><img src="images/portfolio-klotski.png" alt="" /></a> */}
+                            <a href="#" class="image fit"><StaticImage src="../images/portfolio-klotski.png" alt="" /></a>
                             <header>
                                 <a href="https://sleepy-bhaskara-f50b90.netlify.app/">
                                     <h3>華容道 Klotski</h3>
@@ -54,7 +55,7 @@ const Portfolio = () => {
                         </header>
                     </article>
                     <article class="item">
-                        {/* <a href="#" class="image fit"><img src="images/portfolio-picsum.png" alt="" /></a> */}
+                        <a href="#" class="image fit"><StaticImage src="../images/portfolio-picsum.png" alt="" /></a>
                         <header>
                             <a href="https://kind-mestorf-036de9.netlify.app/html2343-project_0918/">
                                 <h3>Picsum - random picture</h3>
@@ -69,7 +70,7 @@ const Portfolio = () => {
                 </div>
                 <div class="col-4 col-12-mobile">
                     <article class="item">
-                        {/* <a href="#" class="image fit"><img src="images/portfolio-saicoreel.png" alt="" /></a> */}
+                        <a href="#" class="image fit"><StaticImage src="../images/portfolio-saicoreel.png" alt="" /></a>
                         <header>
                             <a href="http://www.jagon.com.tw/">
                                 <h3>Saicoreel</h3>
