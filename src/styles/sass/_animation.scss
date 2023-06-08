@@ -1,0 +1,21 @@
+.animationFadeIn15 {
+  animation: fadeIn 1.5s ease-in forwards;
+  animation-delay: 1.5s;
+}
+.animationFadeIn30 {
+  animation: fadeIn 1.5s ease-in forwards;
+  animation-delay: 3s;
+}
+.animationFadeIn45 {
+  animation: fadeIn 1.5s ease-in forwards;
+  animation-delay: 4.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

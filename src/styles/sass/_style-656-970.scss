@@ -1,0 +1,35 @@
+@media (max-width: 970px) and (min-width: 656px) {
+  .container {
+    width: $width-container-m;
+  }
+  .card {
+    width: 100%;
+  }
+  #intro {
+    #intro-cards {
+      flex-direction: column;
+      .intro-card {
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img {
+          width: 30vw;
+          min-width: 10rem;
+        }
+      }
+    }
+  }
+  #contact {
+    #information {
+      .info {
+        margin: 0;
+        a {
+          p {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

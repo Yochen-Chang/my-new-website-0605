@@ -1,0 +1,138 @@
+$color-title: rgb(150, 150, 215);
+
+.show-box {
+  width: 90vw;
+  height: 90vh;
+  padding: 1rem;
+  border: $color-line 1px solid;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 5px 5px $color-anchor-hover;
+  overflow: scroll;
+
+  position: fixed;
+  left: 5vw;
+  top: 1rem;
+  z-index: 200;
+
+  font-family: "Noto Sans TC", sans-serif;
+
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .show-title {
+    width: 100%;
+  }
+
+  .cross-box {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transition: $normal-transition;
+    &:hover {
+      transform: scale(0.9);
+      cursor: pointer;
+    }
+    .line,
+    .line:after {
+      width: 100%;
+      height: 2px;
+      background-color: $color-line;
+      transform: rotate(45deg);
+    }
+    .line:after {
+      content: "";
+      display: block;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.show-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  h5 {
+    font-size: 2rem;
+    img {
+      margin: 0.5rem;
+      height: 2.5rem;
+    }
+  }
+}
+
+.flowchat-box {
+  width: 100%;
+  margin: 1rem auto;
+  border: $color-anchor-hover 1px solid;
+  h3,
+  p {
+    padding: 0.3rem 1rem;
+  }
+  h3 {
+    margin-bottom: 0;
+    background-color: $color-title;
+  }
+}
+
+.show-first {
+  justify-content: flex-start;
+}
+.show-end {
+  justify-content: flex-end;
+}
+.align-first {
+  align-items: flex-start;
+}
+
+.show-30,
+.show-40,
+.show-50,
+.show-60,
+.show-70,
+.show-100 {
+  padding: 1rem;
+}
+
+.show-30 {
+  width: 30%;
+}
+
+.show-40 {
+  width: 40%;
+}
+
+.show-50 {
+  width: 50%;
+}
+
+.show-60 {
+  width: 60%;
+}
+
+.show-70 {
+  width: 70%;
+}
+
+.show-100 {
+  width: 100%;
+}
+
+@media (max-width: 655px) {
+  .show-block {
+    h5 {
+      font-size: 1rem;
+      img {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+  }
+}

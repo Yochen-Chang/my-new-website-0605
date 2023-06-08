@@ -1,0 +1,26 @@
+$color-bg-main: rgb(185, 185, 185);
+$color-bg-second: yellow;
+$color-border: $color-bg-main;
+$transition-bar: width 2s ease;
+$height-bar: 2rem;
+$height-bar-half: 1rem;
+$height-bar-in: 0.5rem;
+$spot-border: 0.4rem;
+
+#portfolio {
+  .popup{
+    display: none;
+  }
+
+  .item{
+    header {
+      h3{
+        font-size: 1.5rem;
+      }
+      ul li{
+        padding: 0 10px;
+        font-size: 1rem;
+      }
+    }
+  }
+}

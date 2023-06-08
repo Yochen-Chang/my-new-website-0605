@@ -5,11 +5,7 @@ const Experience = () => {
     return (
         <section id="experience">
             <div class="container">
-
-                <header>
-                    <h2>Experience</h2>
-                </header>
-
+                
                 <div class="work-area">
                     <h3 class="areaTitle ta-c">Work Experience</h3>
                     <div class="workDiv flexBCRow expAnimation">

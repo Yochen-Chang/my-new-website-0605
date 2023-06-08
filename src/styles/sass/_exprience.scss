@@ -1,0 +1,148 @@
+//  Font setting
+.desktopFont {
+  line-height: 30px;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+  .areaTitle {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  .contentTitle {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: $color-anchor-active;
+  }
+  .contentSubtitle {
+    color: $color-shadow;
+    margin-bottom: 1rem;
+  }
+  @media (max-width: 525px) {
+    .areaTitle {
+      font-size: 1.2rem;
+    }
+    .contentTitle {
+      font-size: 1rem;
+    }
+  }
+  p{
+    margin-bottom: .5rem;
+  }
+}
+
+// Animation setting
+
+.unAnimate.flexBCRow {
+  .exp-img {
+    transform: translateX(-300%) scale(0.1);
+  }
+}
+.unAnimate.flexBCRowr {
+  .exp-img {
+    transform: translateX(300%) scale(0.1);
+  }
+}
+.expAnimation.flexBCRow {
+  .exp-img {
+    animation: comeInLeft 1.5s forwards;
+  }
+}
+.expAnimation.flexBCRowr {
+  .exp-img {
+    animation: comeInRight 1.5s forwards;
+  }
+}
+@media (max-width: 1160px) {
+  .unAnimate.flexBCRow,
+  .unAnimate.flexBCRowr {
+    .exp-img {
+      opacity: 0;
+    }
+  }
+  .expAnimation.flexBCRow,
+  .expAnimation.flexBCRowr {
+    .exp-img {
+      animation: fadeIn 1.5s forwards;
+    }
+  }
+}
+
+// Layout setting
+.work-area {
+  margin-bottom: 5rem;
+}
+.eduDiv,
+.workDiv {
+  margin: 2rem;
+}
+.exp-img {
+  width: 30%;
+  border-radius: 50%;
+}
+.eduContent,
+.workContent {
+  width: 60%;
+  padding: 2rem;
+  border: $color-shadow 1px solid;
+  border-radius: 1rem;
+  background-color: $color-card;
+  box-shadow: 5px 5px 5px $color-shadow;
+  text-align: left;
+  li{
+    font-size: 1rem;
+    line-height: 1.25;
+    .tag{
+        font-weight: 800;
+    }
+  }
+  *{
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 1160px) {
+  .eduDiv,
+  .workDiv {
+    margin: 0 auto;
+    flex-direction: column;
+    width: 100%;
+  }
+  .exp-img {
+    width: 40%;
+  }
+  .eduContent,
+  .workContent {
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 100%;
+  }
+}
+
+// animation
+@keyframes comeInLeft {
+  0% {
+    transform: translateX(-300%) scale(0.1);
+  }
+  50% {
+    transform: translateX(8%);
+  }
+  75% {
+    transform: translateX(-4%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes comeInRight {
+  0% {
+    transform: translateX(300%) scale(0.1);
+  }
+  50% {
+    transform: translateX(-8%);
+  }
+  75% {
+    transform: translateX(4%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}

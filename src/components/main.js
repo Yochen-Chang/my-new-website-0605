@@ -8,7 +8,7 @@ import Contact from './contact'
 
 const Main = () => {
     return (
-        <div id="main">
+        <div id="main" className='desktopFont'>
             <Banner></Banner>
             <Skills></Skills>
             <Portfolio></Portfolio>

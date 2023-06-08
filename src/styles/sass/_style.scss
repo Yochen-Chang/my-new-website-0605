@@ -1,0 +1,348 @@
+// Style setting
+
+// color
+$color-main-bg: rgb(245, 245, 245);
+$color-nav: rgba(255, 255, 255, 0.8);
+$color-line: black;
+$color-anchor-active: #01497c;
+$color-anchor-hover: #89c2d9;
+$color-bannerbox: #012a4a;
+$color-card: white;
+$color-shadow: rgba(125, 125, 125, 0.8);
+
+$button-color: #598392;
+$button-color-hover: #124559;
+$font-color-light: white;
+$font-color-dark: black;
+
+// size
+$pf-card-width: 25vw;
+$pf-card-width-s: 250px;
+$pf-card-height: 450px;
+$width-container: 70vw;
+$width-container-m: 85vw;
+
+// animation
+$normal-transition: all 0.5s ease;
+
+button {
+  padding: 1rem 1.5rem;
+  margin: 1rem;
+  font-size: 1.2rem;
+  box-shadow: $button-color-hover 2px 2px;
+  transition: $normal-transition;
+  background-color: $button-color;
+  color: $font-color-light;
+  border-radius: 0.5rem;
+  &:hover {
+    cursor: pointer;
+    transform: translate(2px, 2px);
+    box-shadow: none;
+    background-color: $button-color-hover;
+  }
+}
+
+.card {
+  width: 25vw;
+  min-width: 18rem;
+  text-align: center;
+  background-color: $color-card;
+  margin: 1rem;
+  img {
+    width: 100%;
+  }
+  h3,
+  p {
+    margin: 1rem;
+    text-align: center;
+  }
+  h3 {
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+}
+
+.container {
+  width: $width-container;
+  margin: 0 auto;
+}
+
+.title-header {
+  padding: 2rem 0;
+  justify-content: center;
+  flex-wrap: nowrap;
+  p {
+    flex-grow: 0;
+    margin: 0 1rem;
+    font-size: 2rem;
+  }
+  .line {
+    flex-grow: 1;
+    width: 10vw;
+    height: 2px;
+    background-color: $color-line;
+  }
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  // background-color: $button-color-hover;
+}
+
+.cover-bg {
+  width: 100%;
+  height: 100vh;
+  background-color: $color-nav;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 150;
+}
+
+#skills{
+  h2{
+    font-size: 3rem;
+  }
+  .row{
+    h3{
+      font-size: 2rem;
+    }
+  }
+}
+
+#about{
+  h2{
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 665px) {
+  .container{
+    width: calc(100vw - 20px);
+  }
+  #chatBoxBg{
+    width: calc(100vw - 20px);
+  }
+}
+
+header {
+  #logo {
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    a {
+      font-size: 2rem;
+      font-weight: bolder;
+    }
+  }
+
+  nav {
+    background-color: $color-nav;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    ul {
+      width: 60vw;
+      min-width: 40rem;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style-type: none;
+
+      li {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        transition: $normal-transition;
+        &:hover {
+          background-color: $color-anchor-hover;
+        }
+        &.active {
+          background-color: $color-anchor-active;
+          a {
+            color: $font-color-light;
+          }
+        }
+        &.sub-active {
+          border: $button-color-hover 2px solid;
+        }
+      }
+    }
+  }
+
+  #scrollBtn {
+    width: 4rem;
+    height: 4rem;
+    background-color: $color-anchor-hover;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 10;
+    transition: $normal-transition;
+    &:hover {
+      background-color: $color-nav;
+      cursor: pointer;
+    }
+    img {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  #intro {
+    #intro-cards {
+      justify-content: space-between;
+      img {
+        padding: 2rem;
+      }
+    }
+    #all-intro {
+      display: none;
+    }
+    #license-area {
+      margin-bottom: 2rem;
+      background-color: $color-main-bg;
+      border: $color-line 1px solid;
+      border-radius: 0.5rem;
+      max-height: 12rem;
+      display: block;
+      transition: max-height 0.5s linear;
+      overflow: hidden;
+      &.collapsed {
+        opacity: 0;
+        max-height: 0;
+      }
+      ul {
+        list-style-type: square;
+        margin: 2rem;
+      }
+      li {
+        margin: 1rem 0;
+      }
+      #licenses {
+        img {
+          width: 2rem;
+        }
+        a {
+          margin: 0.5rem auto;
+        }
+      }
+    }
+  }
+}
+
+
+#banner {
+  margin: 3rem auto;
+  width: 100%;
+  height: 30rem;
+  h2{
+    font-size: 3rem;
+    -webkit-text-stroke: 2px $color-anchor-active;
+    strong{
+      font-size: 3rem;
+      font-weight: bold;
+    }
+  }
+  img {
+    height: 30rem;
+    width: 100%;
+    position: absolute;
+    z-index: -5;
+    object-fit: cover;
+  }
+  #banner-box {
+    width: 20rem;
+    height: 10rem;
+    background-color: $color-bannerbox;
+    color: $font-color-light;
+    border-radius: 1rem;
+    margin: 0 auto;
+    position: relative;
+    top: 10rem;
+    font-family: "Oswald", sans-serif;
+    h3 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+  }
+  footer{
+    font-weight: 300;
+  }
+}
+main {
+  background-color: $color-main-bg;
+}
+
+  #contact {
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: nowrap;
+    h2{
+      font-size: 3rem;
+    }
+    form {
+      flex-grow: 1;
+      align-items: flex-start;
+      label {
+        margin: 0.5rem 0;
+      }
+      input,
+      textArea {
+        padding: 0.5rem;
+        width: 100%;
+      }
+      button {
+        margin-left: 0;
+      }
+    }
+    #information {
+      margin-top: 0.5rem;
+      height: 100%;
+      flex-grow: 0;
+      align-items: flex-start;
+      .info {
+        margin: 1rem 0;
+        a {
+          &:hover {
+            color: $color-anchor-hover;
+          }
+          img {
+            width: 1.5rem;
+            margin: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+  .footer-box {
+    width: 100%;
+    height: 10vh;
+    background-color: $color-main-bg;
+  }
+
+// Animation
+@import "./animation";
+// My css library
+@import "./myStyleLib";
+// Medium-device
+@import "./style-656-970";
+// Small-device
+@import "./style-655";
+// Portfolio
+@import "./portfolio";
+// Introduction
+@import "./introduction";
+// Experience
+@import "./exprience";
+// Normal setting
+@import "./normal-setting";
+// Show box setting
+@import "./show-box";
