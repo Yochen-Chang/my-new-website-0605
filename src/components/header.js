@@ -5,10 +5,10 @@ const Header = () => {
     return (
         <div id="header">
 
-            <div class="top">
+            <div className="top">
 
                 <div id="logo">
-                <span class="image avatar48">
+                <span className="image avatar48">
                     <StaticImage alt="Yoshi Logo" src="../images/icon-Yoshi Logo.png"/>
                 </span>
                 <h1 id="title">Hello I'm Yochen</h1>
@@ -17,24 +17,24 @@ const Header = () => {
 
                 <nav id="nav">
                 <ul>
-                    <li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
-                    <li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
-                    <li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
-                    <li><a href="#experience" id="experience-link"><span class="icon solid fa-user">Experience</span></a></li>
-                    <li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+                    <li><a href="#top" id="top-link"><span className="icon solid fa-home">Intro</span></a></li>
+                    <li><a href="#portfolio" id="portfolio-link"><span className="icon solid fa-th">Portfolio</span></a></li>
+                    <li><a href="#about" id="about-link"><span className="icon solid fa-user">About Me</span></a></li>
+                    <li><a href="#experience" id="experience-link"><span className="icon solid fa-user">Experience</span></a></li>
+                    <li><a href="#contact" id="contact-link"><span className="icon solid fa-envelope">Contact</span></a></li>
                 </ul>
                 </nav>
 
             </div>
 
-            <div class="bottom">
+            <div className="bottom">
 
-                <ul class="icons">
-                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-                <li><a href="#" class="icon brands fa-medium"><span class="label">Medium</span></a></li>
-                <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+                <ul className="icons">
+                <li><a href="#" className="icon brands fa-instagram"><span className="label">Instagram</span></a></li>
+                <li><a href="#" className="icon brands fa-facebook-f"><span className="label">Facebook</span></a></li>
+                <li><a href="#" className="icon brands fa-github"><span className="label">Github</span></a></li>
+                <li><a href="#" className="icon brands fa-medium"><span className="label">Medium</span></a></li>
+                <li><a href="#" className="icon solid fa-envelope"><span className="label">Email</span></a></li>
                 </ul>
 
             </div>

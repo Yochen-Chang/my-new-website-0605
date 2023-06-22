@@ -2,15 +2,15 @@ import * as React from 'react'
 
 const Banner = () => {
     return (
-        <section id="banner" class="dark cover">
-            <div class="container">
+        <section id="banner" className="dark cover">
+            <div className="container">
 
                 <header>
-                    <h2 class="alt">Hi! I'm <strong>Yochen</strong>, a swing engineer</h2>
+                    <h2 className="alt">Hi! I'm <strong>Yochen</strong>, a swing engineer</h2>
                 </header>
 
                 <footer>
-                    <a href="#portfolio" class="button scrolly">Look my portfolio</a>
+                    <a href="#portfolio" className="button scrolly">Look my portfolio</a>
                 </footer>
 
             </div>

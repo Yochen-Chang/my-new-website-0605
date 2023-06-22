@@ -4,12 +4,12 @@ import * as React from 'react'
 const Portfolio = () => {
     return (
         <section id="portfolio">
-            <div class="container">
+            <div className="container">
 
-                <div class="row">
-                    <div class="col-4 col-12-mobile">
-                        <article class="item pf-card">
-                            <a href="#" class="image fit"><StaticImage src="../images/portfolio-breadshop.png" alt="" /></a>
+                <div className="row">
+                    <div className="col-4 col-12-mobile">
+                        <article className="item pf-card">
+                            <a href="#" className="image fit"><StaticImage src="../images/portfolio-breadshop.png" alt="" /></a>
                             <header>
                                 <a href="https://loving-archimedes-17098f.netlify.app/">
                                     <h3>Bread shop</h3>
@@ -21,8 +21,8 @@ const Portfolio = () => {
                                 </ul>
                             </header>
                         </article>
-                        <article class="item pf-card">
-                            <a href="#" class="image fit"><StaticImage src="../images/portfolio-counter.png" alt="" /></a>
+                        <article className="item pf-card">
+                            <a href="#" className="image fit"><StaticImage src="../images/portfolio-counter.png" alt="" /></a>
                             <header>
                                 <a href="https://relaxed-davinci-079f7f.netlify.app/index.html">
                                     <h3>Counter</h3>
@@ -35,9 +35,9 @@ const Portfolio = () => {
                             </header>
                         </article>
                     </div>
-                    <div class="col-4 col-12-mobile">
-                            <article class="item pf-card">
-                                <a href="#" class="image fit"><StaticImage src="../images/portfolio-klotski.png" alt="" /></a>
+                    <div className="col-4 col-12-mobile">
+                            <article className="item pf-card">
+                                <a href="#" className="image fit"><StaticImage src="../images/portfolio-klotski.png" alt="" /></a>
                                 <header>
                                     <a href="https://sleepy-bhaskara-f50b90.netlify.app/">
                                         <h3>華容道 Klotski</h3>
@@ -49,8 +49,8 @@ const Portfolio = () => {
                                 </ul>
                             </header>
                         </article>
-                        <article class="item pf-card">
-                            <a href="#" class="image fit"><StaticImage src="../images/portfolio-picsum.png" alt="" /></a>
+                        <article className="item pf-card">
+                            <a href="#" className="image fit"><StaticImage src="../images/portfolio-picsum.png" alt="" /></a>
                             <header>
                                 <a href="https://kind-mestorf-036de9.netlify.app/html2343-project_0918/">
                                     <h3>Picsum - random picture</h3>
@@ -63,9 +63,9 @@ const Portfolio = () => {
                             </header>
                         </article>
                     </div>
-                    <div class="col-4 col-12-mobile">
-                        <article class="item pf-card">
-                            <a href="#" class="image fit"><StaticImage src="../images/portfolio-saicoreel.png" alt="" /></a>
+                    <div className="col-4 col-12-mobile">
+                        <article className="item pf-card">
+                            <a href="#" className="image fit"><StaticImage src="../images/portfolio-saicoreel.png" alt="" /></a>
                             <header>
                                 <a href="http://www.jagon.com.tw/">
                                     <h3>Saicoreel</h3>
@@ -76,7 +76,7 @@ const Portfolio = () => {
                                     <li>使用簡單架構、提供報告，以利更新與維護</li>
                                 </ul>
                             </header>
-                            <div class="popup">
+                            <div className="popup">
                                 <h4>案前協商與討論：</h4>
                                 <ul>
                                     <li>目標：使網頁內容有效呈現，讓使用者清楚獲得產品相關資訊</li>
