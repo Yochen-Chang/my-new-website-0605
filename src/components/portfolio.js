@@ -2,10 +2,22 @@ import { StaticImage } from 'gatsby-plugin-image'
 import * as React from 'react'
 
 const Portfolio = () => {
+    function popup_active_handler(event){
+        const target = $(event.currentTarget);
+        const pf_card = $(target).closest('.pf-card');
+        const popup = $(pf_card).find('.popup-content');
+        
+        $(popup).addClass('active');
+    }
+    function popup_close_handler(event){
+        const target = $(event.currentTarget);
+        const popup_content = $(target).closest('.popup-content');
+        
+        $(popup_content).removeClass('active');
+    }
     return (
         <section id="portfolio">
             <div className="container">
-
                 <div className="row">
                     <div className="col-4 col-12-mobile">
                         <article className="item pf-card">
@@ -75,38 +87,76 @@ const Portfolio = () => {
                                     <li>優化資料呈現方式、頁面指向位置、RWD</li>
                                     <li>使用簡單架構、提供報告，以利更新與維護</li>
                                 </ul>
+                                <button className="popup-button button" onClick={popup_active_handler}>More Information</button>
                             </header>
-                            <div className="popup">
-                                <h4>案前協商與討論：</h4>
-                                <ul>
-                                    <li>目標：使網頁內容有效呈現，讓使用者清楚獲得產品相關資訊</li>
-                                    <li>風格、用色：簡約風格，以黑白為主要用色</li>
-                                </ul>
-                                <h4>介面設計、指向頁面：</h4>
-                                <ul>
-                                    <li>採用一頁式網頁，並將產品以卡片方式呈現（有效利用大量空間）</li>
-                                    <li>利用導覽列，快速移動到各區域（快速聚焦）</li>
-                                    <li>無複雜指向頁（僅首頁與產品頁面）</li>
-                                </ul>
-                                <h4>Phototype展示：</h4>
-                                <ul>
-                                    <li>使用 Figma 展示網頁介面與指向頁面</li>
-                                </ul>
-                                <h4>網站架設：</h4>
-                                <ul>
-                                    <li>利用簡單架構進行撰寫，易於日後更新與維護</li>
-                                    <li>使用 Bootstrap 及 jQuery 相關套件撰寫</li>
-                                </ul>
-                                <h4>特色：</h4>
-                                <ul>
-                                    <li>提供維護更新報告，以利日後更新、維護</li>
-                                    <li>響應式網頁，偵測裝置改變排版</li>
-                                    <li>新增輪播、最新消息區等廣告行銷區域</li>
-                                    <li>卡片排版，大量展示產品資訊</li>
-                                    <li>利用主次視圖及排版，有效呈現產品內容</li>
-                                    <li>空間規劃，增加可利用空間</li>
-                                    <li>指向頁面扁平化，並利用導覽列快速導引至各區</li>
-                                </ul>
+                            <div className="popup-content">
+                                <div className="show-box flexCCRow">
+                                <div className="show-title flexCCCol">
+                                <h3>釣具用品網 - 重新設計</h3>
+                                <div className="cross-box flexCCCol" onClick={popup_close_handler}>
+                                    <div className="line"></div>
+                                </div>
+                                <div className="divider"></div>
+                                </div>
+                                <div className="show-content flexCCCol">
+                                    <div className="show-block show-70">
+                                        <div className="flowchat-box">
+                                        <h3>案前協商與討論：</h3>
+                                        <p><strong>目標：</strong>使網頁內容有效呈現，讓使用者清楚獲得產品相關資訊</p>
+                                        <p><strong>風格、用色：</strong>簡約風格，以黑白為主要用色</p>
+                                        </div>
+                                        <div className="flowchat-box">
+                                        <h3>介面設計、指向頁面：</h3>
+                                        <p>- 採用一頁式網頁，並將產品以卡片方式呈現（有效利用大量空間）</p>
+                                        <p>- 利用導覽列，快速移動到各區域（快速聚焦）</p>
+                                        <p>- 無複雜指向頁（僅首頁與產品頁面）</p>
+                                        </div>
+                                        <div className="flowchat-box">
+                                        <h3>Phototype展示：</h3>
+                                        <p>- 使用 Figma 展示網頁介面與指向頁面</p>
+                                        </div>
+                                        <div className="flowchat-box">
+                                        <h3>網站架設：</h3>
+                                        <p>- 利用簡單架構進行撰寫，易於日後更新與維護</p>
+                                        <p>- 使用 Bootstrap 及 jQuery 相關套件撰寫</p>
+                                        </div>
+                                    </div>
+                                    <div className="show-block">
+                                        <h5 className="flexCCRow"><StaticImage src="../images/Saicoreel/design.png" alt=""/>指向頁面扁平化，並利用導覽列快速導引至各區</h5>
+                                        <StaticImage src="../images/Saicoreel/Sitemap.png" className="show-70" alt=""/>
+                                        <StaticImage src="../images/Saicoreel/SaicoReel sitemap-simple.png" className="show-70" alt=""/>
+                                    </div>
+                                    <div className="show-block">
+                                        <h5 className="flexCCRow"><StaticImage src="../images/Saicoreel/design.png" alt=""/>空間規劃，增加可利用空間</h5>
+                                        <StaticImage src="../images/Saicoreel/inf-area.png" className="show-70" alt=""/>
+                                    </div>
+                                    <div className="show-block">
+                                        <h5 className="flexCCRow"><StaticImage src="../images/Saicoreel/design.png" alt=""/>利用主次視圖及排版，有效呈現產品內容</h5>
+                                        <StaticImage src="../images/Saicoreel/product-page.png" className="show-70" alt=""/>
+                                    </div>
+                                    <div className="show-block">
+                                        <h5 className="flexCCRow"><StaticImage src="../images/Saicoreel/design.png" alt=""/>卡片排版，大量展示產品資訊</h5>
+                                        <StaticImage src="../images/Saicoreel/product-show.png" className="show-50" alt=""/>
+                                    </div>
+                                    <div className="show-block">
+                                        <h5 className="flexCCRow"><StaticImage src="../images/Saicoreel/design.png" alt=""/>新增輪播、最新消息區等廣告行銷區域</h5>
+                                        <StaticImage src="../images/Saicoreel/carousel-animation.gif" className="show-70" alt=""/>
+                                    </div>
+                                    <div className="show-block">
+                                        <h5 className="flexCCRow"><StaticImage src="../images/Saicoreel/design.png" alt=""/>響應式網頁，偵測裝置改變排版</h5>
+                                        <StaticImage src="../images/Saicoreel/RWD.png" className="show-70" alt=""/>
+                                    </div>
+                                    <div className="show-block">
+                                        <h5 className="flexCCRow"><StaticImage src="../images/Saicoreel/design.png" alt=""/>提供維護更新報告，以利日後更新、維護</h5>
+                                        <StaticImage src="../images/Saicoreel/PPT.png" className="show-70" alt=""/>
+                                    </div>
+                                    </div>
+                                    <a target="_blank" rel="noopener" href="http://www.jagon.com.tw/">
+                                        <button>
+                                            Visit the website
+                                        </button>
+                                    </a>
+                                </div>
                             </div>
                         </article>
                     </div>

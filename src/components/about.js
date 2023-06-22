@@ -2,28 +2,34 @@ import * as React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 
 const About = () => {
+    function skip_chat_animation(event){
+        const target = $(event.currentTarget);
+        $('.chat-content').removeClass('animation-fadeIn');
+        $(target).remove();
+    }
     return (
         <section id="about">
             <div className="container">
-
                 <header>
                     <h2>About Me</h2>
                 </header>
 
+                <button id="skipChatBtn" className="pos-fix op-05 hide" onClick={skip_chat_animation}>Skip</button>
+
                 <div id="chatBoxBg" className="container vw-70">
-                    <div id="chat1" className="mychat flexSSRow animation-fadeIn">
+                    <div id="chat1" className="chat-content mychat flexSSRow">
                         <StaticImage src="../images/Avator-Me.png" alt="" className="avator m-1" />
                             <div className="chatBox dis-ib m-1 p-1 shadow-rb">
                                 你好，我是張祐誠，現在正積極尋找前端工程師的職缺！
                             </div>
                     </div>
-                    <div id="chat2" className="femaleChat flexESRow">
+                    <div id="chat2" className="chat-content femaleChat flexESRow">
                         <StaticImage src="../images/Avator-Female.png" alt="" className="avator m-1" />
                             <div className="chatBox dis-ib m-1 p-1 shadow-lb">
                                 咦？為什麼會想找前端工程師的職缺呢？
                             </div>
                     </div>
-                    <div id="chat3" className="myChat flexSSRow">
+                    <div id="chat3" className="chat-content myChat flexSSRow">
                         <StaticImage src="../images/Avator-Me.png" alt="" className="avator m-1" />
                             <div className="chatBox dis-ib m-1 p-1 shadow-rb">
                                 前一份工作中，想在工作上擁有更好的專業能力，所以在台大資訊系統訓練班進修軟體技術的課程，當時接觸到網頁設計相關的課程，覺得自己很適合在方面發展。
@@ -31,13 +37,13 @@ const About = () => {
                                     所以在離職之後，持續進修，便開始準備踏上前端工程師這條路。
                             </div>
                     </div>
-                    <div id="chat4" className="maleChat flexESRow">
+                    <div id="chat4" className="chat-content maleChat flexESRow">
                         <StaticImage src="../images/Avator-Male.png" alt="" className="avator m-1" />
                             <div className="chatBox dis-ib m-1 p-1 shadow-lb">
                                 覺得自己很適合？為什麼會這麼說呢？
                             </div>
                     </div>
-                    <div id="chat5" className="myChat flexSSRow">
+                    <div id="chat5" className="chat-content myChat flexSSRow">
                         <StaticImage src="../images/Avator-Me.png" alt="" className="avator m-1" />
                             <div className="chatBox dis-ib m-1 p-1 shadow-rb">
                                 其實，最早接觸到程式是在大學、研究所期間。 <br />
@@ -48,14 +54,14 @@ const About = () => {
                                     前端工程師，不僅可以滿足我撰寫程式碼的渴望，呈現的樣貌也是自己所喜愛的，真的是一舉兩得！
                             </div>
                     </div>
-                    <div id="chat6" className="femaleChat flexESRow">
+                    <div id="chat6" className="chat-content femaleChat flexESRow">
                         <StaticImage src="../images/Avator-Female.png" alt="" className="avator m-1" />
                             <div className="chatBox dis-ib m-1 p-1 shadow-lb">
                                 恭喜你，看來你找到了一份適合自己的工作呢！ <br />
                                     剛好你說到了大學和研究所，能跟我們說說，那時候的經歷嗎？
                             </div>
                     </div>
-                    <div id="chat7" className="myChat flexSSRow">
+                    <div id="chat7" className="chat-content myChat flexSSRow">
                         <StaticImage src="../images/Avator-Me.png" alt="" className="avator m-1" />
                         <div className="chatBox dis-ib m-1 p-1 shadow-rb">
                             我畢業於 臺灣大學應用力學所 和 臺灣海洋大學機械與機電工程學系。
@@ -73,14 +79,14 @@ const About = () => {
                             XD，非常感謝教授那時候的訓練，讓我在日後的工作上受用無窮。
                         </div>
                     </div>
-                    <div id="chat8" className="maleChat flexESRow">
+                    <div id="chat8" className="chat-content maleChat flexESRow">
                         <StaticImage src="../images/Avator-Male.png" alt="" className="avator m-1" />
                             <div className="chatBox dis-ib m-1 p-1 shadow-lb">
                                 哇！早就聽聞台大應力所是天下第一所，培育非常的精實呢！ <br />
                                     看了你的個人經歷，你前兩份的工作都不是軟體相關的經歷，能跟我們稍微介紹一下嗎？
                             </div>
                     </div>
-                    <div id="chat9" className="myChat flexSSRow">
+                    <div id="chat9" className="chat-content myChat flexSSRow">
                         <StaticImage src="../images/Avator-Me.png" alt="" className="avator m-1" />
                             <div className="chatBox dis-ib m-1 p-1 shadow-rb">
                                 是的，我曾任職過 機構工程師 和 專利工程師。 <br />
@@ -99,14 +105,14 @@ const About = () => {
                                 在兩份工作上學習到了很多，相信這些都能幫助我更勝任前端工程師一職。
                             </div>
                     </div>
-                    <div id="chat10" className="maleChat flexESRow">
+                    <div id="chat10" className="chat-content maleChat flexESRow">
                         <StaticImage src="../images/Avator-Male.png" alt="" className="avator m-1" />
                             <div className="chatBox dis-ib m-1 p-1 shadow-lb">
                                 真的，實務上突發狀況真的很多，學校的知識也沒有教解決的
                                 SOP，常常靠的是自己的臨機應變～
                             </div>
                     </div>
-                    <div id="chat11" className="femaleChat flexESRow">
+                    <div id="chat11" className="chat-content femaleChat flexESRow">
                         <StaticImage src="../images/Avator-Female.png" alt="" className="avator m-1" />
                             <div className="chatBox dis-ib m-1 p-1 shadow-lb">
                                 我是對表達方式很有感覺，明明報告同一件事情，有些人的說法，真的很難讓你不認同他！
@@ -114,7 +120,7 @@ const About = () => {
                                     那你在這兩份工作上，有學習到什麼能對前端工程師產生幫助的事情嗎？
                             </div>
                     </div>
-                    <div id="chat12" className="myChat flexSSRow">
+                    <div id="chat12" className="chat-content myChat flexSSRow">
                         <StaticImage src="../images/Avator-Me.png" alt="" className="avator m-1" />
                             <div className="chatBox dis-ib m-1 p-1 shadow-rb">
                                 在之前的工作經歷中，覺得對前端工程師幫助最大的就是「系統化」。
@@ -126,7 +132,7 @@ const About = () => {
                                             這些概念，讓我很成功的在程式碼上，減少重工、不需要的部分，並且讓程式碼可重複使用，不僅僅提升我的撰寫速度，更讓程式碼的可維護性提升。
                                         </div>
                     </div>
-                    <div id="chat13" className="maleChat flexESRow">
+                    <div id="chat13" className="chat-content maleChat flexESRow">
                         <StaticImage src="../images/Avator-Male.png" alt="" className="avator m-1" />
                             <div className="chatBox dis-ib m-1 p-1 shadow-lb">
                                 系統化，也就是所謂的模組化，對於程式碼真的是一個很重要的觀念。
@@ -134,7 +140,7 @@ const About = () => {
                                     看到你曾經有接洽過一個網路設計的案件，能跟我們分享一下嗎？
                             </div>
                     </div>
-                    <div id="chat14" className="myChat flexSSRow">
+                    <div id="chat14" className="chat-content myChat flexSSRow">
                         <StaticImage src="../images/Avator-Me.png" alt="" className="avator m-1" />
                             <div className="chatBox dis-ib m-1 p-1 shadow-rb">
                                 其實，這是我第一個實際上線的案件，那時因為認識的人覺得工作室的網站太陽春了，想要重新設計，所以能夠有機會可以接到這個案件。
@@ -156,13 +162,13 @@ const About = () => {
                                             這次經驗加強了我在實務上的不足，相信之後在接案上也會更加效率、熟悉。
                                     </div>
                     </div>
-                    <div id="chat15" className="femaleChat flexESRow">
+                    <div id="chat15" className="chat-content femaleChat flexESRow">
                         <StaticImage src="../images/Avator-Female.png" alt="" className="avator m-1" />
                             <div className="chatBox dis-ib m-1 p-1 shadow-lb">
                                 有接案經驗，除了能夠了解網頁設計的流程，也可以提升臨機應變的能力呢！那，關於前端工程師的未來職涯是怎麼規劃的？
                             </div>
                     </div>
-                    <div id="chat16" className="myChat flexSSRow">
+                    <div id="chat16" className="chat-content myChat flexSSRow">
                         <StaticImage src="../images/Avator-Me.png" alt="" className="avator m-1" />
                             <div className="chatBox dis-ib m-1 p-1 shadow-rb">
                                 因為本身不是資訊科背景的，所以通過自我進修來提昇自己程式撰寫的能力，導致在實務經驗上還需要再磨練。
@@ -180,7 +186,7 @@ const About = () => {
                                             總言之，就是不斷精進本身領域的技術、擁有自己的一套方法，並廣泛學習各領域的知識。
                                         </div>
                     </div>
-                    <div id="chat17" className="maleChat flexESRow">
+                    <div id="chat17" className="chat-content maleChat flexESRow">
                         <StaticImage src="../images/Avator-Male.png" alt="" className="avator m-1" />
                             <div className="chatBox dis-ib m-1 p-1 shadow-lb typing">
                                 輸入中......

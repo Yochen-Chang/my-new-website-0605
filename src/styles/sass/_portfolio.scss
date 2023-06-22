@@ -8,8 +8,11 @@ $height-bar-in: 0.5rem;
 $spot-border: 0.4rem;
 
 #portfolio {
-  .popup{
+  .popup-content{
     display: none;
+    &.active{
+      display: block;
+    }
   }
 
   .item{

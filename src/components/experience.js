@@ -8,7 +8,7 @@ const Experience = () => {
                 
                 <div className="work-area">
                     <h3 className="areaTitle ta-c">Work Experience</h3>
-                    <div className="workDiv flexBCRow expAnimation">
+                    <div className="workDiv flexBCRow unAnimate">
                         <StaticImage src="../images/experience-LiCai_logo.jpeg" className="exp-img" alt="" />
                             <div className="workContent">
                                 <h4 className="contentTitle">聯誠事務所 專利工程師</h4>

@@ -1,6 +1,10 @@
 import * as React from 'react'
 
 const Banner = () => {
+    const handleClick = () => {
+        // 點擊事件處理邏輯
+        console.log('元素被點擊了！');
+    };
     return (
         <section id="banner" className="dark cover">
             <div className="container">
@@ -10,7 +14,7 @@ const Banner = () => {
                 </header>
 
                 <footer>
-                    <a href="#portfolio" className="button scrolly">Look my portfolio</a>
+                    <a href="#portfolio" className="button scroll" onClick={handleClick}>Look my portfolio</a>
                 </footer>
 
             </div>

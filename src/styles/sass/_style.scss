@@ -25,6 +25,10 @@ $width-container-m: 85vw;
 // animation
 $normal-transition: all 0.5s ease;
 
+.hide{
+  display: none;
+}
+
 button {
   padding: 1rem 1.5rem;
   margin: 1rem;
