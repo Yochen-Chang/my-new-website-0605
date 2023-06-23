@@ -4,7 +4,7 @@ const Contact = () => {
     const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
     const handleSubmit = (event) => {
-        event.preventDefault();
+        // event.preventDefault();
         // 在這裡處理表單提交的邏輯，例如發送郵件或儲存資料的後端處理
 
         // 設定表單提交成功的狀態
