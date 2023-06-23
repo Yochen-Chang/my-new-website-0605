@@ -16,7 +16,7 @@ const Contact = () => {
                 {isFormSubmitted ? (
                     <p>已成功傳送！感謝您的訊息。</p>
                 ) : (
-                    <form name="Contact Form" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+                    <form name="Contact Form" method="POST" data-netlify="true" action="" onSubmit={handleSubmit}>
                         <input type="hidden" name="form-name" value="Contact Form" />
                         <div class="row">
                             <div class="col-6 col-12-mobile">
