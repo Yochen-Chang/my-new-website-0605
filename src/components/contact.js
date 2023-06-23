@@ -22,25 +22,22 @@ const Contact = () => {
                 {isFormSubmitted ? (
                     <p>訊息訊息已成功發送，感謝您！</p>
                 ) : (
-                    <form name="contact-form" method="POST" data-netlify="true" 
-                    data-netlify-honeypot="bot-field" action="#"
+                    <form name="contact" method="POST" data-netlify="true" 
+                    data-netlify-honeypot="bot-field" action="/success/"
                     onSubmit="submit">
                         <input class="d-none" name="bot-field" />
-                        <div className="row">
-                            <div className="col-6 col-12-mobile">
-                                <input type="text" name="name" placeholder="Name" />
-                            </div>
-                            <div className="col-6 col-12-mobile">
-                                <input type="text" name="email" placeholder="Email" />
-                            </div>
-                            <div className="col-12">
-                                <textarea name="message" placeholder="Message"></textarea>
-                            </div>
-                            <div className="col-12">
-                                <button type="submit">Send Message</button>
-                            </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6 mt-3">
+                                <label for="name">Your Name</label>
+                                <input type="text" class="form-control" id="name" name="name" />
+                              </div>
+                          <div class="form-group col-md-6 mt-3">
+                            <label for="inputEmail">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" name="email" />
+                          </div>
                         </div>
-                    </form>
+                        <button type="submit" class="btn btn-primary mt-3">Send</button>
+                      </form>
                 )}
 
             </div>
