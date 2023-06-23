@@ -22,16 +22,22 @@ const Contact = () => {
                 {isFormSubmitted ? (
                     <p>訊息訊息已成功發送，感謝您！</p>
                 ) : (
-                    <form name="contact-form" netlify>
-                        <input type="hidden" name="form-name" value="contact"></input>
+                    <form name="contact-form" method="POST" data-netlify="true" 
+                    data-netlify-honeypot="bot-field" action="#"
+                    onSubmit="submit">
+                        <input class="d-none" name="bot-field" />
                         <div className="row">
-                            <div className="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
-                            <div className="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
+                            <div className="col-6 col-12-mobile">
+                                <input type="text" name="name" placeholder="Name" />
+                            </div>
+                            <div className="col-6 col-12-mobile">
+                                <input type="text" name="email" placeholder="Email" />
+                            </div>
                             <div className="col-12">
                                 <textarea name="message" placeholder="Message"></textarea>
                             </div>
                             <div className="col-12">
-                                <input type="submit" value="Send Message" />
+                                <button type="submit">Send Message</button>
                             </div>
                         </div>
                     </form>
