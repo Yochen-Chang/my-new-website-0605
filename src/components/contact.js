@@ -23,7 +23,7 @@ const Contact = () => {
                         <div className="col-12">
                             <textarea name="message" placeholder="Message"></textarea>
                         </div>
-                        <ReCAPTCHA sitekey="{process.env.GATSBY_RECAPTCHA_KEY}" />
+                        <ReCAPTCHA sitekey={process.env.RECAPTCHA_SITE_KEY} />
                     </div>
                     <button type="submit">Send</button>
                 </form>
