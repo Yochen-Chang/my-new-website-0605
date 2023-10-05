@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
     return (
@@ -23,7 +22,7 @@ const Contact = () => {
                         <div className="col-12">
                             <textarea name="message" placeholder="Message"></textarea>
                         </div>
-                        <ReCAPTCHA sitekey="{process.env.RECAPTCHA_SITE_KEY}" />
+                        <div data-netlify-recaptcha="true"></div>
                     </div>
                     <button type="submit">Send</button>
                 </form>
