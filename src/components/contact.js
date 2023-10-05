@@ -9,7 +9,7 @@ const Contact = () => {
                     <h2>Contact</h2>
                 </header>
 
-                <form name="Contact Form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={handleSubmit}>
+                <form name="Contact Form" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" data-netlify-recaptcha="true" onSubmit={handleSubmit}>
                     <input type="hidden" name="form-name" value="Contact Form" />
                     <input name="bot-field" style={{display: 'none'}} />
                     <div className="row">
@@ -22,6 +22,7 @@ const Contact = () => {
                         <div className="col-12">
                             <textarea name="message" placeholder="Message"></textarea>
                         </div>
+                        <ReCAPTCHA sitekey="{process.env.GATSBY_RECAPTCHA_KEY}" />
                     </div>
                     <button type="submit">Send</button>
                 </form>
